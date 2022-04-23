@@ -1,0 +1,17 @@
+### 登录
+POST 127.0.0.1:9001/njust/e-commerce/login
+Content-Type: application/json
+
+{
+  "username": "jsfm",
+  "password": "25d55ad283aa400af464c76d713c07ad"
+}
+
+### 注册
+POST 127.0.0.1:9001/njust/e-commerce/register
+Content-Type: application/json
+
+{
+  "username": "kobe",
+  "password": "25d55ad283aa400af464c76d713c07ad"
+}

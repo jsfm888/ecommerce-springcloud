@@ -69,7 +69,7 @@ public class JWTServiceImpl implements IJWTService {
                 .setId(UUID.randomUUID().toString())
                 //jwt 过期时间
                 .setExpiration(expireDate)
-                //jwt 签名算法
+                //jwt 签名算法  私钥加密
                 .signWith(getPrivateKey(), SignatureAlgorithm.RS256)
                 .compact();
     }
