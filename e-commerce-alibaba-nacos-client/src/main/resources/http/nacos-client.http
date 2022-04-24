@@ -1,3 +1,9 @@
 ### 查询服务实例信息
 GET http://127.0.0.1:8000/ecommerce-nacos-client/nacos-client/service-instance
 Accept: application/json
+
+### 查看sleuth跟踪信息
+GET http://127.0.0.1:9001/njust/ecommerce-nacos-client/sleuth/trace-info
+Accept: application/json
+e-commerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJpZFwiOjEwLFwidXNlcm5hbWVcIjpcImpzZm1cIn0iLCJqdGkiOiI5NjZlNzAxYy1mNTlmLTQ4ZGItYjVkMS03ZDBjMzEyZjJmOTAiLCJleHAiOjE2NTA4MTYwMDB9.S5EHZnxN3QGE9cWcfW4nEUzo_FQvbbneLGA_akYCeS7cZvVuP_M6R9X8PZmK4-S9FQHy0EeiTS60RAOTaYCcI7Sd0nfapaEQ_TNJhHvBEWYV9vnuNL-kOAYrB5MXpXD0r3DhZK3tAn3lwN4frIeDa1ro2USQCaHPw1tB9L-FAcBdX1rv-3h6qJPVZFQB8Tswf78sASIqKVcMDkAZEezeQ66MH48Rw_7gDFQ12_qyul-9SQdiZMZT_1kC04NCknvZks5y7uJgY7cbrQagRo2aNLnx3UKCJAz6uwF8qi34gY0yVyS3MtJBKIoVBoxUoKhQ8AMh53kcy33xPQIgvmGvYw
+token: njust
