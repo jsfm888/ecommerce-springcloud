@@ -7,8 +7,9 @@ import com.njust.ecommerce.entity.EcommerceAddress;
 import com.njust.ecommerce.filter.AccessContext;
 import com.njust.ecommerce.service.IAddressService;
 import com.njust.ecommerce.vo.LoginUserInfo;
-import org.checkerframework.checker.units.qual.A;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
 import java.util.Collections;
@@ -16,11 +17,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class AddressService implements IAddressService {
+@Slf4j
+@Transactional(rollbackFor = Exception.class)
+public class AddressServiceImpl implements IAddressService {
 
     private final EcommerceAddressDao addressDao;
 
-    public AddressService(EcommerceAddressDao ecommerceAddressDao) {
+    public AddressServiceImpl(EcommerceAddressDao ecommerceAddressDao) {
         this.addressDao = ecommerceAddressDao;
     }
 

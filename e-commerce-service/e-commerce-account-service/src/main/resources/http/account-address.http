@@ -1,0 +1,42 @@
+### 创建用户地址信息
+POST http://127.0.0.1:9001/njust/ecommerce-account-service/address/create-address
+Content-Type: application/json
+e-commerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJpZFwiOjEwLFwidXNlcm5hbWVcIjpcImpzZm1cIn0iLCJqdGkiOiI5MGNjMWVmYy0zNzQ4LTQ5NDUtYTAzYi1lMTllYmUyYzk4MzEiLCJleHAiOjE2NTA5ODg4MDB9.G4NFiu38NF8HKqJ9mo6xgbPZeqk6NGw2MBhxYJvWFRA-59UQQIFMjDXm81VpIv1bCEThiaIoke7z2PczG0wDjUTRta8JYJ6zWD7E5gQ2xJlfs6bHADz0uBgf-eF2qbLTgxEpRsccJcWMndCYOZZGh7O9QZOVLBZeiNF8AVmljnvluCiP-pkl37qgp1klsmsg9E305tDmG0P4b4YNKYSW59vC50iluvuEx7TANPb0dLfDZfZL22GyIgUOJ4Gs56ahcvhjFLUQAhg1LQqCzWmmPVMeR4srdek6aWvoXWaz5OVB8Hk_V5JvHmCVEMdjEmlHSSdfAQRWhgAPlqjbomVaIQ
+
+{
+  "userId": 10,
+  "addressItems": [
+    {
+      "username": "winchell",
+      "phone": "15150566362",
+      "province": "江苏省",
+      "city": "苏州市",
+      "addressDetail": "姑苏区创智赢新"
+    }
+  ]
+}
+
+### 当前登录用户地址信息
+GET http://127.0.0.1:9001/njust/ecommerce-account-service/address/current-address
+accept: application/json
+e-commerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJpZFwiOjEwLFwidXNlcm5hbWVcIjpcImpzZm1cIn0iLCJqdGkiOiI5MGNjMWVmYy0zNzQ4LTQ5NDUtYTAzYi1lMTllYmUyYzk4MzEiLCJleHAiOjE2NTA5ODg4MDB9.G4NFiu38NF8HKqJ9mo6xgbPZeqk6NGw2MBhxYJvWFRA-59UQQIFMjDXm81VpIv1bCEThiaIoke7z2PczG0wDjUTRta8JYJ6zWD7E5gQ2xJlfs6bHADz0uBgf-eF2qbLTgxEpRsccJcWMndCYOZZGh7O9QZOVLBZeiNF8AVmljnvluCiP-pkl37qgp1klsmsg9E305tDmG0P4b4YNKYSW59vC50iluvuEx7TANPb0dLfDZfZL22GyIgUOJ4Gs56ahcvhjFLUQAhg1LQqCzWmmPVMeR4srdek6aWvoXWaz5OVB8Hk_V5JvHmCVEMdjEmlHSSdfAQRWhgAPlqjbomVaIQ
+
+
+### 根据id获取地址信息
+GET http://127.0.0.1:9001/njust/ecommerce-account-service/address/address-info?id=1
+accept: application/json
+e-commerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJpZFwiOjEwLFwidXNlcm5hbWVcIjpcImpzZm1cIn0iLCJqdGkiOiI5MGNjMWVmYy0zNzQ4LTQ5NDUtYTAzYi1lMTllYmUyYzk4MzEiLCJleHAiOjE2NTA5ODg4MDB9.G4NFiu38NF8HKqJ9mo6xgbPZeqk6NGw2MBhxYJvWFRA-59UQQIFMjDXm81VpIv1bCEThiaIoke7z2PczG0wDjUTRta8JYJ6zWD7E5gQ2xJlfs6bHADz0uBgf-eF2qbLTgxEpRsccJcWMndCYOZZGh7O9QZOVLBZeiNF8AVmljnvluCiP-pkl37qgp1klsmsg9E305tDmG0P4b4YNKYSW59vC50iluvuEx7TANPb0dLfDZfZL22GyIgUOJ4Gs56ahcvhjFLUQAhg1LQqCzWmmPVMeR4srdek6aWvoXWaz5OVB8Hk_V5JvHmCVEMdjEmlHSSdfAQRWhgAPlqjbomVaIQ
+
+
+### 根据tableId获取地址信息
+POST http://127.0.0.1:9001/njust/ecommerce-account-service/address/address-info-by-tableId
+Content-Type: application/json
+e-commerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJpZFwiOjEwLFwidXNlcm5hbWVcIjpcImpzZm1cIn0iLCJqdGkiOiI5MGNjMWVmYy0zNzQ4LTQ5NDUtYTAzYi1lMTllYmUyYzk4MzEiLCJleHAiOjE2NTA5ODg4MDB9.G4NFiu38NF8HKqJ9mo6xgbPZeqk6NGw2MBhxYJvWFRA-59UQQIFMjDXm81VpIv1bCEThiaIoke7z2PczG0wDjUTRta8JYJ6zWD7E5gQ2xJlfs6bHADz0uBgf-eF2qbLTgxEpRsccJcWMndCYOZZGh7O9QZOVLBZeiNF8AVmljnvluCiP-pkl37qgp1klsmsg9E305tDmG0P4b4YNKYSW59vC50iluvuEx7TANPb0dLfDZfZL22GyIgUOJ4Gs56ahcvhjFLUQAhg1LQqCzWmmPVMeR4srdek6aWvoXWaz5OVB8Hk_V5JvHmCVEMdjEmlHSSdfAQRWhgAPlqjbomVaIQ
+
+{
+  "ids": [
+    {
+      "id": 1
+    }
+  ]
+}
