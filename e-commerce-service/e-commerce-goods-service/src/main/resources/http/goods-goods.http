@@ -1,0 +1,57 @@
+### 根据 TableId 查询详细商品信息
+POST http://127.0.0.1:9001/njust/ecommerce-goods-service/goods/goods-info
+Content-Type: application/json
+e-commerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJpZFwiOjEwLFwidXNlcm5hbWVcIjpcImpzZm1cIn0iLCJqdGkiOiJkMDc0Y2JhMS03MDgzLTQwNzUtODAyNi1jYmNmZDNlOTk2NWEiLCJleHAiOjE2NTEyNDgwMDB9.eb0vTubAMXP3AOwtQDOZ9Xah-ia0V1ev3Bn3iH-lB1kWZueEP3yPOV5Fv06uqsHv4SU7Dok10RUK6et2u-dlltS0VIEVNGHK69fBtfhZjROG0x_JPtUm6hQVJFMyClCijXbE5bG33IIGkPy06Oa_UAJE4Mt0lPhoOReTd8rktRweq8beZnTFNd9FeNY-e-nlv65RPQgUHLHpDWihxogXMdi9pJM6n2TEXFCajMrcWxIf_1KCfqVQDTH2576gGSRZjPm01l49YgDZpPC-alI_Mhp33y0R2sS4kKF2-_QxwWtE0PZPuHYKGVDO30RBahA0FEwliwNQCviN_tQTvQgmKQ
+
+{
+  "ids": [
+    {
+      "id": 10
+    },
+    {
+      "id": 11
+    }
+  ]
+}
+
+
+### 根据分页查询简单商品信息
+GET http://127.0.0.1:9001/njust/ecommerce-goods-service/goods/page-simple-goods-info?page=1
+Accept: application/json
+e-commerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJpZFwiOjEwLFwidXNlcm5hbWVcIjpcImpzZm1cIn0iLCJqdGkiOiJkMDc0Y2JhMS03MDgzLTQwNzUtODAyNi1jYmNmZDNlOTk2NWEiLCJleHAiOjE2NTEyNDgwMDB9.eb0vTubAMXP3AOwtQDOZ9Xah-ia0V1ev3Bn3iH-lB1kWZueEP3yPOV5Fv06uqsHv4SU7Dok10RUK6et2u-dlltS0VIEVNGHK69fBtfhZjROG0x_JPtUm6hQVJFMyClCijXbE5bG33IIGkPy06Oa_UAJE4Mt0lPhoOReTd8rktRweq8beZnTFNd9FeNY-e-nlv65RPQgUHLHpDWihxogXMdi9pJM6n2TEXFCajMrcWxIf_1KCfqVQDTH2576gGSRZjPm01l49YgDZpPC-alI_Mhp33y0R2sS4kKF2-_QxwWtE0PZPuHYKGVDO30RBahA0FEwliwNQCviN_tQTvQgmKQ
+
+
+### 根据 TableId 查询简单商品信息: 完整的 goods cache
+### 第二步验证, 删掉 cache
+### 第三步验证, 删除 cache 中其中一个商品
+POST http://127.0.0.1:9001/njust/ecommerce-goods-service/goods/simple-goods-info
+Content-Type: application/json
+e-commerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJpZFwiOjEwLFwidXNlcm5hbWVcIjpcImpzZm1cIn0iLCJqdGkiOiJkMDc0Y2JhMS03MDgzLTQwNzUtODAyNi1jYmNmZDNlOTk2NWEiLCJleHAiOjE2NTEyNDgwMDB9.eb0vTubAMXP3AOwtQDOZ9Xah-ia0V1ev3Bn3iH-lB1kWZueEP3yPOV5Fv06uqsHv4SU7Dok10RUK6et2u-dlltS0VIEVNGHK69fBtfhZjROG0x_JPtUm6hQVJFMyClCijXbE5bG33IIGkPy06Oa_UAJE4Mt0lPhoOReTd8rktRweq8beZnTFNd9FeNY-e-nlv65RPQgUHLHpDWihxogXMdi9pJM6n2TEXFCajMrcWxIf_1KCfqVQDTH2576gGSRZjPm01l49YgDZpPC-alI_Mhp33y0R2sS4kKF2-_QxwWtE0PZPuHYKGVDO30RBahA0FEwliwNQCviN_tQTvQgmKQ
+
+{
+  "ids": [
+    {
+      "id": 10
+    },
+    {
+      "id": 11
+    }
+  ]
+}
+
+
+### 扣减商品库存
+PUT http://127.0.0.1:9001/njust/ecommerce-goods-service/goods/deduct-goods-inventory
+Content-Type: application/json
+e-commerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJpZFwiOjEwLFwidXNlcm5hbWVcIjpcImpzZm1cIn0iLCJqdGkiOiJkMDc0Y2JhMS03MDgzLTQwNzUtODAyNi1jYmNmZDNlOTk2NWEiLCJleHAiOjE2NTEyNDgwMDB9.eb0vTubAMXP3AOwtQDOZ9Xah-ia0V1ev3Bn3iH-lB1kWZueEP3yPOV5Fv06uqsHv4SU7Dok10RUK6et2u-dlltS0VIEVNGHK69fBtfhZjROG0x_JPtUm6hQVJFMyClCijXbE5bG33IIGkPy06Oa_UAJE4Mt0lPhoOReTd8rktRweq8beZnTFNd9FeNY-e-nlv65RPQgUHLHpDWihxogXMdi9pJM6n2TEXFCajMrcWxIf_1KCfqVQDTH2576gGSRZjPm01l49YgDZpPC-alI_Mhp33y0R2sS4kKF2-_QxwWtE0PZPuHYKGVDO30RBahA0FEwliwNQCviN_tQTvQgmKQ
+
+[
+  {
+    "goodsId": 10,
+    "count": 100
+  },
+  {
+    "goodsId": 12,
+    "count": 34
+  }
+]
