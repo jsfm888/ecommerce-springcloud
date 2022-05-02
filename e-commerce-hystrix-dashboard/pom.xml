@@ -9,13 +9,14 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>e-commerce-alibaba-nacos-client</artifactId>
+    <artifactId>e-commerce-hystrix-dashboard</artifactId>
+
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <!-- 模块名及描述信息 -->
-    <name>e-commerce-alibaba-nacos-client</name>
-    <description>Nacos Client</description>
+    <name>e-commerce-hystrix-dashboard</name>
+    <description>Hystrix Dashboard</description>
 
     <dependencies>
         <!-- spring cloud alibaba nacos discovery 依赖 -->
@@ -24,45 +25,18 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
             <version>2.2.3.RELEASE</version>
         </dependency>
-        <!-- zipkin = spring-cloud-starter-sleuth + spring-cloud-sleuth-zipkin-->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zipkin</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.kafka</groupId>
-            <artifactId>spring-kafka</artifactId>
-            <version>2.5.0.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
-        <!-- feign 替换 JDK 默认的 URLConnection 为 okhttp -->
-        <dependency>
-            <groupId>io.github.openfeign</groupId>
-            <artifactId>feign-okhttp</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.github.openfeign</groupId>
-            <artifactId>feign-gson</artifactId>
-            <version>11.0</version>
-        </dependency>
-        <!-- 引入 hystrix -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.njust.ecommerce</groupId>
-            <artifactId>e-commerce-mvc-config</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
         </dependency>
-
     </dependencies>
 
     <!--
@@ -85,17 +59,5 @@
             </plugin>
         </plugins>
     </build>
-
-    <!-- 配置远程仓库 -->
-    <repositories>
-        <repository>
-            <id>spring-milestones</id>
-            <name>Spring Milestones</name>
-            <url>https://repo.spring.io/milestone</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
 
 </project>

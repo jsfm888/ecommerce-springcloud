@@ -1,0 +1,24 @@
+GET http://127.0.0.1:9000/ecommerce-nacos-client/hystrix/hystrix-command-annotation?serviceId=e-commerce-nacos-client
+Accept: application/json
+
+###
+GET http://127.0.0.1:9000/ecommerce-nacos-client/hystrix/simple-hystrix-command?serviceId=e-commerce-nacos-client
+Accept: application/json
+
+###
+GET http://127.0.0.1:9000/ecommerce-nacos-client/hystrix/cache-hystrix-command?serviceId=e-commerce-nacos-client
+Accept: application/json
+
+###
+GET http://127.0.0.1:9000/ecommerce-nacos-client/hystrix/cache-annotation-02?serviceId=e-commerce-nacos-client
+Accept: application/json
+
+
+###
+GET http://127.0.0.1:9000/ecommerce-nacos-client/hystrix/request-merge
+Accept: application/json
+
+###
+GET http://127.0.0.1:9000/ecommerce-nacos-client/hystrix/request-merge-annotation
+Accept: application/json
+

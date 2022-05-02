@@ -1,5 +1,6 @@
 package com.njust.ecommerce.controller;
 
+import com.njust.ecommerce.service.communication.AuthorityFeignClient;
 import com.njust.ecommerce.service.communication.UseRestTemplateService;
 import com.njust.ecommerce.service.communication.UseRibbonService;
 import com.njust.ecommerce.service.communication.UseFeignApi;
@@ -17,16 +18,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/communication")
 public class CommunicationController {
 
-    private final AuthorityFeignClient feignClient;
-    private final UseRibbonService ribbonService;
-
     private final UseRestTemplateService restTemplateService;
-
+    private final UseRibbonService ribbonService;
+    private final AuthorityFeignClient feignClient;
     private final UseFeignApi useFeignApi;
 
     public CommunicationController(UseRestTemplateService restTemplateService,
                                    UseRibbonService ribbonService,
-                                   AuthorityFeignClient feignClient, UseFeignApi useFeignApi) {
+                                   AuthorityFeignClient feignClient,
+                                   UseFeignApi useFeignApi) {
         this.restTemplateService = restTemplateService;
         this.ribbonService = ribbonService;
         this.feignClient = feignClient;

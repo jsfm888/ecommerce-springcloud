@@ -1,6 +1,5 @@
 package com.njust.ecommerce.service.communication;
 
-import com.njust.ecommerce.controller.AuthorityFeignClient;
 import com.njust.ecommerce.vo.JwtToken;
 import com.njust.ecommerce.vo.UsernameAndPassword;
 import feign.Feign;

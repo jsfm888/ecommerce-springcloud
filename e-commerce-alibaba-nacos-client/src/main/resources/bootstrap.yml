@@ -34,21 +34,24 @@ spring:
       type: kafka # 默认是web
     base-url: http://localhost:9411/
 
-  # feign 的相关配置
-  feign:
-    # 开启 gzip 压缩
-    compression:
-      request:
-        enable: true
-        mime-types: text/html,application/xml,application/json
-        min-request-size: 1024
-      response:
-        enable: true
-    # 禁用默认的 http，启用 okttp
-    httpclient:
-      enable: false
-    okhttp:
+# feign 的相关配置
+feign:
+  # 开启 gzip 压缩
+  compression:
+    request:
       enable: true
+      mime-types: text/html,application/xml,application/json
+      min-request-size: 1024
+    response:
+      enable: true
+  # 禁用默认的 http，启用 okttp
+  httpclient:
+    enable: false
+  okhttp:
+    enable: true
+  # Openfeign 集成 Hystrix
+  hystrix:
+    enabled: true
 
 
 # 暴露端点
