@@ -1,0 +1,7 @@
+### 发送默认消息信道消息
+GET http://127.0.0.1:8006/ecommerce-stream-client/message/default
+Content-Type: application/json
+
+### 发送自定义消息信道消息
+GET http://127.0.0.1:8006/ecommerce-stream-client/message/jsfm
+Content-Type: application/json
